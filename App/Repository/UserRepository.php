@@ -106,7 +106,7 @@ class UserRepository extends AbstractRepository
 
         $req = $this->connexion->prepare($sql);
 
-        $req->bindValue(1, $email, \PDO::PARAM_INT);
+        $req->bindValue(1, $email, \PDO::PARAM_STR);
 
         $req->execute();
 

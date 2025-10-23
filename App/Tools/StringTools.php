@@ -8,6 +8,4 @@ class StringTools
     {
         return htmlentities(strip_tags(stripslashes(trim($data))), ENT_QUOTES, 'UTF-8');
     }
-
-
 }

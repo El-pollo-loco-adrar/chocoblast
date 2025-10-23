@@ -87,25 +87,27 @@ class SecurityService
             }
             //vérifie format mail
             if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-                return "email pas bon"    ;
+                return "email pas bon";
             }
 
             //Nettoyer les données
             $email = StringTools::sanitize($_POST['email']);
             $password = StringTools::sanitize($_POST['password']);
 
+            //dump($email);
             //Vérifier si mail est dans bdd
             $emailExist = $this->userRepository->emailExist($email);
             if ($emailExist === false){
-                return "mail existe pas ";
+                return "Mail introuvable";
             }
+            //dump($emailExist);
 
             //Récup du mdp de l'utilisateur
             $recupPassword = $this->userRepository->passwordByEmail($email);
 
             //Vérifier correspondance avec mdp dans la bdd
             if (!password_verify($password, $recupPassword['password'])){
-                return"mdp pas pareil";
+                return "❌ Mot de passe incorrect";
             }
 
             //Récup utilisateur connecté
