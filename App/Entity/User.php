@@ -2,29 +2,36 @@
 
 namespace App\Entity;
 
-class User
+use App\Entity\Entity;
+
+class User extends Entity
 {
-    private int $id;
-    private string $firstanme;
+    private ?int $id;
+    private string $firstname;
     private string $lastname;
     private ?string $pseudo;
     private string $email;
     private string $password;
-    private ?string $imgProfil;
+    private ?string $imgProfile;
     private ?array $grants;
     private ?bool $status;
 
     //Construct
     public function __construct(
-        string $firstanme,
-        string $lastname,
-        string $email,
-        string $password
+        ?string $firstname = null,
+        ?string $lastname= null,
+        ?string $email= null,
+        ?string $password= null
     ) {
-        $this->firstanme = $firstanme;
+        $this->firstname = $firstname;
         $this->lastname = $lastname;
+        $this->pseudo = null;
         $this->email = $email;
         $this->password = $password;
+        $this->imgProfile = null;
+        $this->grants = [];
+        $this->status = null;
+        $this->id = null;
     }
 
     //Getters et setters
@@ -38,13 +45,13 @@ class User
         return $this;
     }
 
-    public function getFirstanme()
+    public function getFirstname()
     {
-        return $this->firstanme;
+        return $this->firstname;
     }
-    public function setFirstanme($firstanme)
+    public function setFirstname($firstname)
     {
-        $this->firstanme = $firstanme;
+        $this->firstname = $firstname;
         return $this;
     }
 
@@ -88,13 +95,13 @@ class User
         return $this;
     }
 
-    public function getImgProfil()
+    public function getimgProfile()
     {
-        return $this->imgProfil;
+        return $this->imgProfile;
     }
-    public function setImgProfil($imgProfil)
+    public function setimgProfile($imgProfile)
     {
-        $this->imgProfil = $imgProfil;
+        $this->imgProfile = $imgProfile;
         return $this;
     }
 

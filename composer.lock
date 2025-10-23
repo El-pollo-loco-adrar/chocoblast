@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e06e8f0298b0df70f78be696cae6f01",
+    "content-hash": "4e16d2b6bae1ee8842c8ddca5062713f",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -68,6 +68,55 @@
                 }
             ],
             "time": "2025-03-02T21:31:24+00:00"
+        },
+        {
+            "name": "mithridatem/router",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/evaluationWeb/router-librairie.git",
+                "reference": "1b8bcf6cbd9423f5a340d001b8a9cffcbdfa87e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/evaluationWeb/router-librairie/zipball/1b8bcf6cbd9423f5a340d001b8a9cffcbdfa87e2",
+                "reference": "1b8bcf6cbd9423f5a340d001b8a9cffcbdfa87e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mithridatem\\Routing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mithridatem"
+                }
+            ],
+            "description": "Lightweight PHP routing library with configurable authorization and controller resolution.",
+            "homepage": "https://github.com/evaluationWeb/router-librairie",
+            "keywords": [
+                "http",
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/evaluationWeb/router-librairie/issues",
+                "source": "https://github.com/evaluationWeb/router-librairie"
+            },
+            "time": "2025-10-04T13:45:23+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -650,6 +699,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "mithridatem/router": 20,
         "symfony/var-dumper": 20,
         "vlucas/phpdotenv": 20
     },

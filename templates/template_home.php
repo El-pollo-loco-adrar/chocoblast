@@ -6,6 +6,6 @@
     <title><?=$title ?? "" ?></title>
 </head>
 <body>
-    <h1>Bienvenue pour te faire chocoblasté !</h1>
+    <h1>Bienvenue pour te faire chocoblaster !</h1>
 </body>
 </html>

@@ -26,4 +26,5 @@ php -S 127.0.0.1:8000 -t public
 ```bash
 composer require --dev symfony/var-dumper
 composer require vlucas/phpdotenv
+composer require mithridatem/router (router maison)
 ```
